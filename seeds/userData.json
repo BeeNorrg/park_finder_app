@@ -1,0 +1,28 @@
+[
+    {
+      "name": "Bob",
+      "email": "BobLogBlog@hotmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Steve",
+      "email": "SteveDave@gmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Crash",
+      "email": "CrashOverride@aol.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Ted",
+      "email": "theodorelogan@msn.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Bill",
+      "email": "bill.s.preston.esq@yahoo.com",
+      "password": "password12345"
+    }
+  ]
+  
