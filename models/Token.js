@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Parks extends Model {}
+class Token extends Model {}
 
-Parks.init(
+Token.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,37 +11,28 @@ Parks.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        address: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        latitude: {
+        parks_id: {
             type: DataTypes.INTEGER,
-            validate: {
-              min: -90,
-              max: 90
+            references: {
+                model: 'parks',
+                key: 'id',
             }
         },
-        longitude: {
+        amenities_id: {
             type: DataTypes.INTEGER,
-            validate: {
-                min: -180,
-                max: 180
+            references: {
+                model: 'amenities',
+                key: 'id',
             }
         },
-
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'parks',
+        modelName: 'token', 
     }
 );
 
-module.exports = Parks;
+module.exports = Token;
