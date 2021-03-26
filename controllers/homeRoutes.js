@@ -3,10 +3,7 @@ const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Renders homepage
-router.get('/homepage', async (req, res) => {
-  console.log('you hit homepage')
-  
-  
+router.get('/', async (req, res) => {
   try {
     res.render('homepage');
   }
