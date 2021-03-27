@@ -110,6 +110,13 @@ Amenities.init(
         recCenter: {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
+        },
+        parks_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'parks',
+                key: 'id',
+            }
         },  
     },
     {
