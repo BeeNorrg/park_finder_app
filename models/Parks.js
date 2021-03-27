@@ -33,7 +33,6 @@ Parks.init(
                 max: 180
             }
         },
-
     },
     {
         sequelize,

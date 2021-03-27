@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Cherokee Regional Park",
+        "address": "700 Cherokee Heights Blvd, St Paul, MN 55107",
+        "latitude": "44.923110",
+        "longitude": "-93.108490"
+    },
+    {
+        "name": "Boyd Park",
+        "address": "335 Selby Ave, St Paul, MN 55102",
+        "latitude": "44.946960",
+        "longitude": "-93.114070"
+    }
+
+]
