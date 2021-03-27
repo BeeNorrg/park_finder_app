@@ -20,17 +20,17 @@ Parks.init(
             allowNull: false,
         },
         latitude: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(6, 4),
             validate: {
               min: -90,
-              max: 90
+              max: 90,
             }
         },
         longitude: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(6, 4),
             validate: {
                 min: -180,
-                max: 180
+                max: 180,
             }
         },
     },
