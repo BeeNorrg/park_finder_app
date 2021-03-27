@@ -1,49 +1,33 @@
 const User = require('./User');
 const Parks = require('./Parks');
 const Amenities = require('./Amenities');
-const Token = require('./Token')
+const ParkAmenities = require('./ParkAmenities');
 const Favorites = require('./Favorites')
 
 
-Token.belongsTo(Parks, {
+Amenities.associate = function(models) {
+    Amenities.belongsToMany(models.Parks, {
+      through: models.ParkAmenities,
+      foreignKey: "amenities_id"
+    });
+};
+
+ParkAmenities.belongsTo(Parks, {
     foreignKey: 'parks_id',
-    through: {
-        model: Token,
-        unique: false
-    }
+    targetKey: 'id'
 });
 
-Token.belongsTo(Amenities, {
+ParkAmenities.belongsTo(Amenities, {
     foreignKey: 'amenities_id',
-    through: {
-        model: Token,
-        unique: false
-    }
+    targetKey: 'id'
 });
 
-Favorites.belongsTo(User, {
-    foreignKey: 'user_id'
-});
-
-Favorites.belongsTo(Parks, {
-    foreignKey: 'parks_id',
-})
-
-// Amenities belongsTo Parks
-Amenities.belongsTo(Parks, {
-    foreignKey: 'parks_id'
-});
-
-// Parks have many Amenities
-Parks.hasMany(Amenities, {
-    foreignKey: 'parks_id'
-});
 
 
 module.exports = { 
     User, 
     Parks, 
     Amenities,
-    Token,
+    ParkAmenities,
     Favorites, 
 };
