@@ -1,0 +1,28 @@
+
+.accordion-button {
+    float:left;
+    margin-right:10px;
+}
+
+.sportsColumn {
+    float:left;
+}
+
+#searchContainer {
+    width:500px;
+    left:0px;
+    margin-left:0px;
+    padding: 0px;
+}
+
+#searchSub {
+    padding:0px;
+}
+
+#sportsPopulate {
+    border: solid 1px black;
+}
+
+#filterDropdown {
+    float:right;
+}
