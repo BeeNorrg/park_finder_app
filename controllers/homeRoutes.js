@@ -2,22 +2,6 @@ const router = require('express').Router();
 const { User, Parks } = require('../models');
 const withAuth = require('../utils/auth');
 
-// Renders homepage
-// router.get('/', async (req, res) => {
-//   try {
-//     const api_key = process.env.API_KEY;
-//     const maps = `https://maps.googleapis.com/maps/api/js?key=${api_key}&callback=initMap&libraries=&v=weekly`
-
-
-//     res.render('homepage', {
-//       api_key,
-//       maps
-//     });
-//   }
-//   catch (err) {
-//     res.status(500).json(err);
-//   }
-// })
 
 
 // we have 2 get routes for the home page - also put the login requirement back on
