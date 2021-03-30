@@ -7,7 +7,6 @@ function initMap() {
   });
   
 
-
   //loops through array and calls addMarker function for every item in array
   for(let i=0; i < locations.length; i++) {
     addMarker(locations[i])
@@ -21,11 +20,10 @@ function initMap() {
     });
   };
 
-
   console.log(locations)
 
-
 };  
+
 
   const locations = [
     {lat: 44.9231, lng: -93.1085},
@@ -36,7 +34,8 @@ function initMap() {
     {lat: 44.9356, lng: -93.1124},
     {lat: 44.8474, lng: -92.9953}
   ];
-//can get data here - trying to push to array
+
+//this gets data here - trying to push to array, getting error message in console
 document.querySelectorAll('#park-btn').addEventListener('click', function (event) {
   event.preventDefault();
 
