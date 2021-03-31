@@ -2,23 +2,38 @@
 let filterGroups = {
     sports: ["Basketball", "Volleyball", "Soccer", "Baseball", "Tennis", "Ice Skating", "Skating", "Disc Golf", "Pickleball"],
     activities: ["Kayaking", "Canoe Rentals", "Bike Rentals", "Horseshoes",],
-    fishing: ["", ""],
-    picnic: ["",],
-    amenities: ["Aquatics Center", ""],
+    fishing: ["Boat Launch", "Beach", "Lake", "Pond",],
+    family: ["Tables", "Pavilion", "Grills", "Fire Rings", "Rec Center",],
+    amenities: ["Aquatics Center", "Playgrounds", "Trails", "Grass Fields", "Dog Park",],
 };
-
+//used to convert filterGroups strings to camelcase for the purpose of HTML tagging
+function camelize(str) {
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+      return index === 0 ? word.toLowerCase() : word.toUpperCase();
+    }).replace(/\s+/g, '');
+  }
+//gets the id of our checkboxes
+const attributeGetter = function() {
+    let attribute = this.getAttribute("id");
+    let attrTarget = document.getElementById("searchBar");
+    attrTarget.value = attrTarget.value + " + " + "'" + attribute +"'";
+};
+  
 //init value of currentFilter
 let currentFilter = filterGroups.sports;
+//
+let listenerIDs = [];
+//function to take filters from database/array and put them into our DOM
 function searchBarPopLoop () {
     //main loop for generating search filters
-    for (i=0; i < 4; i++) {
+    for (i=0; i <= 4; i++) {
         
         if (i === 1) {
             currentFilter = filterGroups.activities;
         } if (i === 2) {
             currentFilter = filterGroups.fishing;
         } if (i === 3) {
-            currentFilter - filterGroups.picnic;
+            currentFilter = filterGroups.family;
         } else if (i === 4) {
             currentFilter = filterGroups.amenities;
         };
@@ -29,7 +44,7 @@ function searchBarPopLoop () {
         //array of variables that rounds our column size to the neares even number for even spacing of the filterGroups
         let columnSize = [sportsColumnSize = 2*Math.round(columnCalc[0]/2), activityColumnSize = 2*Math.round(columnCalc[1]/2), fishingColumnSize = 2*Math.round(columnCalc[2]/2), picnicColumnSize = 2*Math.round(columnCalc[3]/2), amenityColumnSize = 2*Math.round(columnCalc[4]/2),];
         //array to store the filterGroup names as strings
-        let filterNames = ["sports", "activities", "fishing", "picnics", "amenities"];
+        let filterNames = ["sports", "activities", "fishing", "family", "amenities"];
         //empty array to store filter element ids
         let currentIds = [];
         //empty array to store filter checkbox HTML
@@ -37,7 +52,7 @@ function searchBarPopLoop () {
         
         //the number of columns needed for our current filterGroup
         let currentDivvy = divvies[i];
-        //the size of the columns needed, unrounded. this isn't used, it's just here for logging purposes
+        //the size of the columns needed, unrounded. this isn't used, it's just here for debugging/logging purposes
         let currentCCalc = columnCalc[i];
         //the size of the columns needed, rounded to the nearest even integer
         let currentCSize = columnSize[i];
@@ -48,13 +63,15 @@ function searchBarPopLoop () {
 
         //selects which element we're putting filters in and assigns it a responsively sized column and id. also fills the currentIds array with element ids that the filter checkboxes are appended to
         for (n=0; n < currentDivvy; n++) {
-            $("#" + currentFName + "Filters").append("<div class='col-md-" + currentCSize + " sportsColumn' id='" + currentFName + "Populate" + n + "'></div>");
+            $("#" + currentFName + "Filters").append("<div class='col-md-" + currentCSize + " " + currentFName + "column' id='" + currentFName + "Populate" + n + "'></div>");
             currentIds.push("#" + currentFName + "Populate" + n);
         };
         console.log("currentIds", currentIds);
         //generates the HTML for our checkboxes, all properly id'd and everything
         for (x=0; x < currentFilter.length; x++) {
-            filterHTML.push("<div class='form-check'><input class='form-check-input' type='checkbox' id='" + currentFilter[x] + "'><label class='form-check-label' for='flexCheckDefault' value=''>" + currentFilter[x] + "</label></div>")
+            filterHTML.push("<div class='form-check'><input class='form-check-input' type='checkbox' id='" + camelize(currentFilter[x]) + "'><label class='form-check-label' for='flexCheckDefault' value=''>" + currentFilter[x] + "</label></div>")
+            console.log(currentFName);
+            console.log(currentFilter[x]);
         };
         console.log("filterHTML:", filterHTML);
 
@@ -72,23 +89,22 @@ function searchBarPopLoop () {
             if ((currentFilter.length - slicerEnd) < 4 && (currentFilter.length - slicerEnd) > 0) {
                 let remainder = currentFilter.length - slicerEnd;
                 console.log("remainder:", remainder);
-                //sets remaindertart and End to the values of our extras
+                //sets remainderStart and End to the values of our extra filters
                 let remainderStart = slicerStart+=(4+remainder);
                 console.log("remainderStart:", remainderStart);
                 let remainderEnd = slicerEnd+=remainder;
                 console.log("remainderEnd:", remainderEnd);
-                //new slice function for our remainder
+                //new slice function for our remainder filters
                 let remainderSlicer = filterHTML.slice(remainderStart, remainderEnd);
                 console.log("remainderSlicer:", remainderSlicer)
                 //handler for if there's only 1 remaining filter to append to our last div
                 if (remainderSlicer.length === 0) { 
                 $(currentIds[i]).append(filterHTML[remainderStart - 1]);
-                //appends remainder filters to last div being populated
+                //otherwise, append leftover filters to the current currentId div
                 } else {
                 $(currentIds[i]).append(remainderSlicer);
                 };
-
-            //stops the slicers from iterating if we've gone too far
+             //stops the slicers from iterating if we've gone too far
             } else if (slicerStart > currentFilter.length && slicerEnd > currentFilter.length) {
             slicerStart = currentFilter.length;
             slicerEnd = currentFilter.length;
@@ -99,16 +115,33 @@ function searchBarPopLoop () {
             }
             y++;
         };
-
+        for (z=0; z < currentFilter.length; z++) {
+            let camelID = camelize(currentFilter[z]);
+            console.log("camelID:", camelID);
+            listenerIDs.push("#" + camelID);
+        }
         //re-empties these arrays
         currentIds = [];
         filterHTML = [];
         console.log("currentIds", currentIds);
+        console.log("ListenerIDs:", listenerIDs)
+        console.log("i:", i);
+        
     };
 };  
 
-
+function listenerGenerator() {
+    let checkBoxes = document.getElementsByClassName("form-check-input");
+    for (i=0; i < checkBoxes.length; i++) {
+        checkBoxes[i].addEventListener('click', attributeGetter)
+    };
+};
 
 window.onload = function searchBarPop() {
     searchBarPopLoop();
-}
+    listenerGenerator();
+};
+
+ //clicking filters adds them to the search bar, also will be pulling info from the database
+function parkSearch() {
+};
