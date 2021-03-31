@@ -1,2 +1,0 @@
-DROP DATABASE IF EXISTS parkapp_db;
-CREATE DATABASE parkapp_db;
