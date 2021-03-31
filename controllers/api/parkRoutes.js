@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const { Amenities, Favorites, Parks, ParkAmenities, User } = require('../../models');
+const sequelize = require('../../config/connection');
+const { QueryTypes } = require('sequelize');
 
 // Get all parks and attached amenities
 router.get('/parks', async (req, res) => {
@@ -33,64 +35,21 @@ router.get('/user-parks/:id', async (req, res) => {
 });
 
 // Get parks that match filter
-router.post('/filter-parks/:searchOption', async (req, res) => {
+router.post('/filter-parks', async (req, res) => {
     try {
-        const filteredParks = await Amenities.findAll({
-            include: [{ model: Parks },{ model: ParkAmenities }]
-        },
-        {
-            where: {
-                amenities_name: req.params.searchOption
-            }
-        });
+
+        var amenitiesArray = '3, 14' // Need format - discuss with Brandon
+        const filteredParks = await sequelize.query('SELECT name, address FROM parks INNER JOIN park_amenities ON parks.id = park_amenities.parks_id INNER JOIN amenities ON amenities.id = park_amenities.amenities_id WHERE park_amenities.amenities_id IN ($amenities)', {
+            bind: { amenities: amenitiesArray },
+            type: QueryTypes.SELECT
+        })
+
+        console.log(filteredParks);
         res.status(200).json(filteredParks);
     }
     catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
-});
 
 module.exports = router;
-
-// Routing
-// app.post("/api/query", function(req, res) {
-//     var array;
-//     console.log(req.body);
-//     array = req.body["skillIds[]"];
-//     db.Employee.findAll({
-//       include: [
-//         {
-//           model: db.Skills,
-//           required: true,
-//           attributes: ["skill"],
-//           // You will need to enable this
-//          // through: { where: { idSkills: array } }
-//         }
-//       ]
-//     }).then(function(result) {
-//       var barray = [];
-//       for (var i = 0 ; i< result.length; i++){
-//         if (result[i].Skills.length === array.length){
-//           barray.push(result[i]);
-//         }
-//       }
-//       res.json(barray);
-//     });
-//   });
-
-// Plain JS Code
-// $(document).on("submit", ".search", function (e) {
-//     e.preventDefault();
-//     $("#results").empty();
-//     var array = [];
-//     // Each selected CHeckbox id will be added to the array
-//     $("select[name='skill_ids[]']").each(function () {
-//         array.push($(this).val());
-//     })
-//     $.post("/api/query", { skillIds: array }).then(function (response) {
-//         console.log(response);
-//         for (var i = 0; i < response.length; i++) {
-//         //ADD HTML
-//         }
-//     });
-// });
