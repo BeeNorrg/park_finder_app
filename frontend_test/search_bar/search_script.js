@@ -1,9 +1,9 @@
 //this will search through our database eventually
 let filterGroups = {
-    sports: ["Basketball", "Volleyball", "Soccer", "Baseball", "Tennis", "Ice Skating", "Skating", "Disc Golf", "Pickleball"],
-    activities: ["Kayaking", "Canoe Rentals", "Bike Rentals", "Horseshoes",],
+    sports: ["Basketball", "Volleyball", "Soccer", "Baseball", "Tennis", "Ice Rink", "Skate Park", "Disc Golf", "Pickleball"],
+    activities: ["Canoe Rentals", "Bike Rentals", "Horseshoes",],
     fishing: ["Boat Launch", "Beach", "Lake", "Pond",],
-    family: ["Tables", "Pavilion", "Grills", "Fire Rings", "Rec Center",],
+    family: ["Tables", "Pavillion", "Grills", "Fire Rings", "Rec Center", "Other Shelter",],
     amenities: ["Aquatics Center", "Playgrounds", "Trails", "Grass Fields", "Dog Park",],
 };
 //used to convert filterGroups strings to camelcase for the purpose of HTML tagging
@@ -19,6 +19,8 @@ const attributeGetter = function() {
     attrTarget.value = attrTarget.value + " + " + "'" + attribute +"'";
 };
   
+//empty array for our search object IDs
+let searchArray = [];
 //init value of currentFilter
 let currentFilter = filterGroups.sports;
 //
@@ -142,6 +144,64 @@ window.onload = function searchBarPop() {
     listenerGenerator();
 };
 
- //clicking filters adds them to the search bar, also will be pulling info from the database
-function parkSearch() {
-};
+ //clicking filters adds them to the search bar, and adds them to searchArray as table IDs. apologies in advance for the dry code
+let searchButton = document.getElementById("searchButton");
+searchButton.addEventListener('click', function parkSearch() {
+    let searchBarText = document.getElementById("searchBar");
+    let searchValue = searchBarText.value
+    if(searchValue.includes("'basketball'")) {
+        searchArray.push(1);
+    } if(searchValue.includes("'tennis'")) {
+        searchArray.push(2)
+    } if(searchValue.includes("'volleyball'")) {
+        searchArray.push(3);
+    } if(searchValue.includes("'soccer'")) {
+        searchArray.push(4);
+    } if(searchValue.includes("'baseball'")) {
+        searchArray.push(5);
+    } if(searchValue.includes("'iceRink'")) {
+        searchArray.push(6);
+    } if(searchValue.includes("'skatePark'")) {
+        searchArray.push(7);
+    } if(searchValue.includes("'horseshoes'")) {
+        searchArray.push(8);
+    } if(searchValue.includes("'pickleball'")) {
+        searchArray.push(9);
+    }  if(searchValue.includes("'discGolf'")) {
+        searchArray.push(10);
+    } if(searchValue.includes("'grills'")) {
+        searchArray.push(11);
+    } if(searchValue.includes("'tables'")) {
+        searchArray.push(12);
+    } if(searchValue.includes("'pavillion'")) {
+        searchArray.push(13);
+    } if(searchValue.includes("'otherShelter'")) {
+        searchArray.push(14);
+    } if(searchValue.includes("'fireRing'")) {
+        searchArray.push(15);
+    } if(searchValue.includes("'lake'")) {
+        searchArray.push(16);
+    } if(searchValue.includes("'boatLaunch'")) {
+        searchArray.push(17);
+    } if(searchValue.includes("'fishing'")) {
+        searchArray.push(18);
+    } if(searchValue.includes("'beach'")) {
+        searchArray.push(19);
+    } if(searchValue.includes("'playgrounds'")) {
+        searchArray.push(20);
+    } if(searchValue.includes("'trails'")) {
+        searchArray.push(21);
+    } if(searchValue.includes("'aquaticsCenter'")) {
+        searchArray.push(22);
+    } if(searchValue.includes("'canoeRentals'")) {
+        searchArray.push(23);
+    } if(searchValue.includes("'dogPark'")) {
+        searchArray.push(24);
+    } if(searchValue.includes("'recCenter'")) {
+        searchArray.push(25);
+    } 
+    console.log("searchArray:", searchArray)
+});
+
+module.exports = searchArray;
+
