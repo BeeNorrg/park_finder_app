@@ -16,14 +16,16 @@ ParkAmenities.init(
             references: {
                 model: 'parks',
                 key: 'id',
-            }
+            },
+            field: 'parks_id'
         },
         amenities_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'amenities',
                 key: 'id',
-            }
+            },
+            field: 'amenities_id'
         },
     },
     {

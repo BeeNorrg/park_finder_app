@@ -12,6 +12,13 @@ Amenities.associate = function(models) {
     });
 };
 
+Parks.associate = function(models) {
+    Parks.belongsToMany(models.Amenities, {
+      through: models.ParkAmenities,
+      foreignKey: "parks_id"
+    });
+};
+
 ParkAmenities.belongsTo(Parks, {
     foreignKey: 'parks_id',
     targetKey: 'id'
