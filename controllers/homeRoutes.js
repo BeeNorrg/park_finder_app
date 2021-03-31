@@ -1,29 +1,32 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Parks, Amenities, ParkAmenities} = require('../models');
 const withAuth = require('../utils/auth');
 
-// Renders homepage
-router.get('/homepage', async (req, res) => {
-  try {
-    res.render('homepage');
-  }
-  catch (err) {
-    res.status(500).json(err);
-  }
-})
 
-router.get('/', async (req, res) => {
+
+// we have 2 get routes for the home page - also put the login requirement back on
+router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] },
       order: [['name', 'ASC']],
     });
+    const parkData = await Parks.findAll();
+
+    const api_key = process.env.API_KEY;
+    const maps = `https://maps.googleapis.com/maps/api/js?key=${api_key}&callback=initMap&libraries=&v=weekly`
 
     const users = userData.map((project) => project.get({ plain: true }));
+    const parks = parkData.map((project) => project.get({ plain: true }));
+
+    // console.log(parks)
 
     res.render('homepage', {
-      users,
       logged_in: req.session.logged_in,
+      api_key,
+      parks,
+      maps,
+      users,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -35,8 +38,29 @@ router.get('/login', (req, res) => {
     res.redirect('/');
     return;
   }
-
   res.render('login');
 });
+
+router.get('/results', async (req,res) => {
+  try {
+    const parkAmenitiesData = await ParkAmenities.findAll();
+
+    const parks = parkAmenitiesData.map((project) => project.get({ plain: true }));
+    console.log(parks)
+    res.render('results', {
+      parks,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+
+
+
+
+  
 
 module.exports = router;
