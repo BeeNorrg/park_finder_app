@@ -1,0 +1,411 @@
+/* Add a black background color to the top navigation */
+
+@media screen and (min-width: 1056px) {
+  .topnav {
+    background-color: #27352f;
+    overflow: hidden;
+    border-bottom: rgb(121, 17, 17) solid 5px;
+  }
+  .simpleLogo {
+    display: none;
+  }
+  .logoContainer {
+    background-color: #27352f;
+    border-right: rgb(121, 17, 17) solid 5px;
+    padding: 2px 40px 1px 20px;
+    margin: -2% 0 -2% 0;
+    z-index: 5;
+  }
+  .logo {
+    text-align: left;
+    z-index: 5;
+  }
+  .nav-item {
+    margin-right: 15px;
+  }
+  .currentDateC {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 5px;
+    z-index: 5;
+  }
+  #currentDate {
+    color: wheat;
+    text-shadow: 2px 2px rgb(95, 67, 25);
+    font-size: 22px;
+    font-family: 'Oswald', sans-serif;
+  }
+  .form-control {
+    height: 35px;
+  }
+  /*  end search bar zip code css*/
+  .login-btn {
+    background-image: url("../../assets/loginStump.jpg") !important;
+    background-size: cover !important;
+    border: #9b674d 2px solid !important;
+    color: rgb(61, 38, 19) !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    padding-top: 4px !important;
+    font-family: 'Oswald', sans-serif !important;
+  }
+  .login-btn:hover {
+    filter: brightness(80%) !important;
+  }
+  #welcome_msg {
+    font-family: 'Seaweed Script', cursive;
+    font-size: 50px;
+    color: wheat;
+    z-index: 3;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px rgb(95, 67, 25);
+  }
+  .boxcontainer {
+    border: #9b674d 2px solid;
+    padding: 0px 3px 0px 3px;
+    background-image: url("../../assets/loginStump.jpg");
+    background-size: fill;
+    border-radius: 5px;
+    margin-left: 6px;
+  }
+  .boxcontainer:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+  }
+  .user-icon {
+    cursor: pointer;
+    margin-top: -6px;
+  }
+  .user-icon:hover {
+    filter: brightness(80%);
+  }
+  .bar1, .bar2, .bar3 {
+    width: 33px;
+    height: 5px;
+    background-color: rgb(105, 66, 33);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  .navbar-nav {
+    margin-top: 50px;
+    margin-right: .5%;
+    z-index: 5;
+  }
+  .forestBackground {
+    position: absolute;
+    height: 150px;
+    width: 290px;
+    right: 0px;
+    border-left: rgb(121, 17, 17) solid 5px;
+    image-resolution: b;
+    z-index: 4;
+  }
+  /*  ----  */
+  .loopscrollFront {
+    position: absolute;
+    height: 100%;
+    width: 1600px;
+    overflow: hidden;
+    background-image: url(../../assets/Forest1.png);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 100% auto;
+    animation: backgroundloop 100s linear infinite;
+    z-index: 3;
+    margin-left: 10%;
+    margin-top: 3.0%;
+  }
+  .loopscrollMiddle {
+    position: absolute;
+    height: 100%;
+    width: 1600px;
+    overflow: hidden;
+    background-image: url(../../assets/Forest3New.png);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 100% auto;
+    animation: backgroundloop 89s linear infinite;
+    z-index: 2;
+    margin-left: 10%;
+    margin-top: 4.5%;
+  }
+  .loopscrollBack {
+    position: absolute;
+    height: 100%;
+    width: 1600px;
+    overflow: hidden;
+    display: block;
+    background-image: url(../../assets/Forest2New.png);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 100% auto;
+    animation: backgroundloop 78s linear infinite;
+    z-index: 1;
+    margin-left: 10%;
+    margin-top: .3%;
+  }
+  #skyImage {
+    position: absolute;
+    height: 100%;
+    width: 1600px;
+    z-index: 0;
+    margin-left: 10%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+  @keyframes backgroundloop {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -1600px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .topnav {
+    background-color: #27352f;
+    overflow: hidden;
+    border-bottom: rgb(121, 17, 17) solid 5px;
+  }
+  .simpleLogo {
+    display: none;
+  }
+  .login-btn {
+    background-image: url("../../assets/loginStump.jpg") !important;
+    background-size: cover !important;
+    border: #9b674d 2px solid !important;
+    color: rgb(61, 38, 19) !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    padding-top: 4px !important;
+    font-family: 'Oswald', sans-serif !important;
+  }
+  .login-btn:hover {
+    filter: brightness(80%) !important;
+  }
+  .user-icon {
+    cursor: pointer;
+    margin-top: -6px;
+  }
+  .user-icon:hover {
+    filter: brightness(80%);
+  }
+  .boxcontainer {
+    border: #9b674d 2px solid;
+    padding: 0px 3px 0px 3px;
+    background-image: url("../../assets/loginStump.jpg");
+    background-size: fill;
+    border-radius: 5px;
+    margin-left: 6px;
+  }
+  .boxcontainer:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+  }
+  .bar1, .bar2, .bar3 {
+    width: 33px;
+    height: 5px;
+    background-color: rgb(105, 66, 33);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  #welcome_msg {
+    font-family: 'Seaweed Script', cursive;
+    font-size: 50px;
+    color: wheat;
+    z-index: 3;
+    margin-left: 45px;
+    margin-bottom: 6px;
+    text-shadow: 2px 2px rgb(95, 67, 25);
+  }
+  .loopscrollFront {
+    position: absolute;
+    height: 100%;
+    width: 600px;
+    overflow: hidden;
+    background-image: url(../../assets/Forest1.png);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 200% auto;
+    animation: backgroundloop 100s linear infinite;
+    z-index: 3;
+    margin-left: 20%;
+    margin-top: 12%;
+  }
+  .loopscrollMiddle {
+    position: absolute;
+    height: 100%;
+    width: 600px;
+    overflow: hidden;
+    background-image: url(../../assets/Forest3New.png);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 200% auto;
+    animation: backgroundloop 89s linear infinite;
+    z-index: 2;
+    margin-left: 20%;
+    margin-top: 13%;
+  }
+  .loopscrollBack {
+    position: absolute;
+    height: 100%;
+    width: 600px;
+    overflow: hidden;
+    display: block;
+    background-image: url(../../assets/Forest2New.png);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 200% auto;
+    animation: backgroundloop 78s linear infinite;
+    z-index: 1;
+    margin-left: 20%;
+    margin-top: 5%;
+  }
+  .skyImage {
+    position: absolute;
+    height: 100%;
+    width: 610px;
+    z-index: 0;
+    margin-left: 200px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    border-left: rgb(121, 17, 17) solid 5px;
+    border-right: rgb(121, 17, 17) solid 5px;
+  }
+  .forestBackground {
+    display: none;
+  }
+  @keyframes backgroundloop {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -600px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topnav {
+    background-color: #27352f;
+    overflow: hidden;
+    border-bottom: rgb(121, 17, 17) solid 5px;
+  }
+  .simpleLogo {
+    display: none;
+  }
+  .skyImage {
+    display: none;
+  }
+  .loopscrollFront {
+    display:none;
+  }
+  .loopscrollMiddle {
+    display:none;
+  }
+  .loopscrollBack {
+    display:none;
+  }
+  #welcome_msg {
+    font-size:40px;
+    margin-left: -5px ;
+  }
+  .login-btn {
+    background-image: url("../../assets/loginStump.jpg") !important;
+    background-size: cover !important;
+    border: #9b674d 2px solid !important;
+    color: rgb(61, 38, 19) !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    padding: 2px 5px !important;
+    font-family: 'Oswald', sans-serif !important;
+    margin-left:30px !important;
+  }
+  .login-btn:hover {
+    filter: brightness(80%) !important;
+  }
+  .user-icon {
+    cursor: pointer;
+    margin-left: 32px;
+  }
+  .boxcontainer {
+    border: #9b674d 2px solid;
+    background-image: url("../../assets/loginStump.jpg");
+    background-size: fill;
+    border-radius: 4px;
+    margin: 4px 3px 0px 36px;
+  }
+  .boxcontainer:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+  }
+  .bar1, .bar2, .bar3 {
+    width: 33px;
+    height: 5px;
+    background-color: rgb(105, 66, 33);
+    margin: 6px;
+    transition: 0.4s;
+  }
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  
+}
+
+@media screen and (max-width: 425px) {
+  .logo {
+    display:none;
+  }
+  .simpleLogo {
+    height: 50px;
+  }
+  #welcome_msg {
+    display: none;
+  }
+  .login-btn {
+    display: absolute !important;
+    height: 40px;
+    width: 80px;
+  }
+  .user-icon {
+    display:block !important;
+    height: 50px;
+    width: 50px;
+  }
+}
