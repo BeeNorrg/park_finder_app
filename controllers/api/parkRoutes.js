@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { where } = require('sequelize/types');
 const { Amenities, Favorites, Parks, ParkAmenities, User } = require('../../models');
 
 // Get all parks and attached amenities
@@ -50,6 +49,8 @@ router.post('/filter-parks/:searchOption', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+module.exports = router;
 
 // Routing
 // app.post("/api/query", function(req, res) {
