@@ -1,9 +1,10 @@
 const sequelize = require('../config/connection');
-const { User, Parks, Amenities } = require('../models');
+const { User, Parks, Amenities, ParkAmenities } = require('../models');
 
 const userData = require('./userData.json');
 const parksData = require('./parksData.json');
 const amenitiesData = require('./amenitiesData.json');
+const parkamenditiesData = require('./parkamenditiesData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -19,6 +20,11 @@ const seedDatabase = async () => {
   });
 
   await Amenities.bulkCreate(amenitiesData, {
+    individualHooks: false,
+    returning: true,
+  });
+
+  await ParkAmenities.bulkCreate(parkamenditiesData, {
     individualHooks: false,
     returning: true,
   });

@@ -41,12 +41,19 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/results', (req,res) => {
-  if (req.session.logged_in) {
-    res.redirect('/');
-    return;
+router.get('/results', async (req,res) => {
+  try {
+    const parkAmenitiesData = await ParkAmenities.findAll();
+
+    const parks = parkAmenitiesData.map((project) => project.get({ plain: true }));
+    console.log(parks)
+    res.render('results', {
+      parks,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
   }
-  res.render('results');
 });
 
 
