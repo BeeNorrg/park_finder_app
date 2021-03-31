@@ -11,6 +11,10 @@
     -webkit-text-size-adjust: 100%;
     /* 2 */
   }
+
+  header {
+    align-content: center;
+  }
   
   /* Sections
      ========================================================================== */
@@ -1062,7 +1066,7 @@
     background-color: #cccccc;
   }
   
-  .btn.btn-black {
+  . .btn-black {
     background-color: #000000;
     color: #ffffff;
   }

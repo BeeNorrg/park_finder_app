@@ -1,0 +1,120 @@
+
+    <div class="row">
+        <div class="col">
+            <div class="input-group mb-3" id="searchGroup">
+                <button class="btn btn-primary" type="button" id="filterDropdown" data-bs-toggle="collapse"
+                    data-bs-target="#searchFilters" aria-expanded="false"
+                    aria-controls="#searchFilters">Filters</button>
+                <input type="text" class="form-control" id="searchBar" placeholder="Search Parks" aria-label="search"
+                    aria-describedby="searchButton">
+                <button class="btn btn-outline-secondary" type="button" id="searchButton"><span><i
+                            class="fas fa-search"></i></span></button>
+            </div>
+        </div>
+    </div>
+
+    <section class="container-fluid collapse" id="searchFilters">
+        <div class="row">
+            <div class="col filterColumn">
+                <div class="accordion" id="filteraccordion0">
+                    <div class="accordion-item">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#sportsCollapse" aria-expanded="false" aria-controls="#sportsCollapse">
+                            <span><i class="fas fa-running"></i></span>
+                        </button>
+
+                        <div id="sportsCollapse" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <section class="card card-body filtersCard" id="sportsFilters">
+                                    <!-- Sports filters append here!-->
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col filterColumn">
+                <div class="accordion" id="filteraccordion1">
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#activitiesCollapse" aria-expanded="false"
+                            aria-controls="#activitiesCollapse">
+                            <span><i class="fas fa-biking"></i></span>
+                        </button>
+
+                        <div id="activitiesCollapse" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <section class="card card-body filtersCard" id="activitiesFilters">
+                                    <!-- activity filters append here!-->
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filterColumn">
+                <div class="accordion" id="filteraccordion0">
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#fishingCollapse" aria-expanded="false" aria-controls="#fishingCollapse">
+                            <span><i class="fas fa-water"></i></span>
+                        </button>
+
+                        <div id="fishingCollapse" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#filteraccordion0">
+                            <div class="accordion-body">
+                                <section class="card card-body filtersCard" id="fishingFilters">
+                                    <!-- Sports filters append here!-->
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filterColumn">
+                <div class="accordion" id="filteraccordion2">
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#familyCollapse" aria-expanded="false" aria-controls="#familyCollapse">
+                            <span><i class="fas fa-campground"></i></span>
+                        </button>
+
+                        <div id="familyCollapse" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <section class="card card-body filtersCard" id="familyFilters">
+                                    <!-- picnic filters append here!-->
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col filterColumn">
+                <div class="accordion" id="filteraccordion3">
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#amenityCollapse" aria-expanded="false" aria-controls="#picnicsCollapse">
+                            <span><i class="fas fa-tree"></i></span>
+                        </button>
+
+                        <div id="amenityCollapse" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <section class="card card-body filtersCard" id="amenitiesFilters">
+                                    <!-- amenity filters append here!-->
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

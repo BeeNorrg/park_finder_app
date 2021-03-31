@@ -35,9 +35,6 @@ User.init(
         len: [8],
       },
     },
-    // favorites: {
-    
-    // }
   },
   {
     hooks: {

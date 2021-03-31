@@ -24,6 +24,7 @@
     margin-right: 15px;
   }
   .currentDateC {
+    list-style-type: none;
     position: absolute;
     top: 0;
     right: 0;
