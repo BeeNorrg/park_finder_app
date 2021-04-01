@@ -53,6 +53,4 @@ router.post('/filter-parks', async (req, res) => {
     }
 });
 
-});
-
 module.exports = router;

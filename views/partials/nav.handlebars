@@ -1,0 +1,83 @@
+<script>$(function () {
+        //get the welcome msg element
+        var $all_msg = $('#welcome_msg');
+        //get a list of letters from the welcome text
+        var $wordList = $('#welcome_msg').text().split("");
+        //clear the welcome text msg
+        $('#welcome_msg').text("");
+        //loop through the letters in the $wordList array
+        $.each($wordList, function (idx, elem) {
+            //create a span for the letter and set opacity to 0
+            var newEL = $("<span/>").text(elem).css({
+                opacity: 0
+            });
+            //append it to the welcome message
+            newEL.appendTo($all_msg);
+            //set the delay on the animation for this element
+            newEL.delay(idx * 70);
+            //animate the opacity back to full 1
+            newEL.animate({
+                opacity: 1
+            }, 1100);
+        });
+    });</script>
+<nav class="navbar navbar-expand-lg topnav">
+    <div class="container-fluid">
+        <div class="logoContainer">
+            <img src="./assets/newLogo.gif" alt="logo" class="logo" height="123">
+            <img src="./assets/ParkFinderSimpleLogo.png" alt="simpleLogo" class="simpleLogo">
+        </div>
+        <!-- center pieces -->
+        <div id="welcome_msg">Discover your next adventure. . .</div>
+        <img src="" id="skyImage">
+        <div class="loopscrollFront"></div>
+        <div class="loopscrollMiddle"></div>
+        <div class="loopscrollBack"></div>
+        <img src="./assets/backsplash.jpg" class="forestBackground">
+        <!--Date-->
+        <ul class="currentDateC">
+            <li>
+                <div id="currentDate"></div>
+            </li>
+        </ul>
+        <!-- right panel items user icon, login, menu -->
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <img src="./assets/user-iconNew.png" class="user-icon" height="56" width="56"
+                    style="margin-right: 5px;">
+            </li>
+            {{#if logged_in}}
+            <li class="nav-item active">
+                <button class="btn btn-color navbar-login" id="logout" style="color:rgb(61, 38, 19);">LOGOUT</button>
+            </li>
+            {{else}}
+            <li class="nav-item active">
+                <button class="btn btn-color navbar-login" id="login" type="submit">LOGIN</button>
+            </li>
+            {{/if}}
+            <li class="nav-item active">
+                <div class="boxcontainer" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<script src="./assets/test.js"></script>
+<script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
