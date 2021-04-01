@@ -1,3 +1,5 @@
+const { search } = require("../../controllers/api/parkRoutes");
+
 //this will search through our database eventually
 let filterGroups = {
     sports: ["Basketball", "Volleyball", "Soccer", "Baseball", "Tennis", "Ice Rink", "Skate Park", "Disc Golf", "Pickleball"],
@@ -146,62 +148,87 @@ window.onload = function searchBarPop() {
 
  //clicking filters adds them to the search bar, and adds them to searchArray as table IDs. apologies in advance for the dry code
 let searchButton = document.getElementById("searchButton");
-searchButton.addEventListener('click', function parkSearch() {
+
+const parkSearch = async (event) => {
+    event.preventDefault();
+
     let searchBarText = document.getElementById("searchBar");
     let searchValue = searchBarText.value
     if(searchValue.includes("'basketball'")) {
-        searchArray.push(1);
-    } if(searchValue.includes("'tennis'")) {
-        searchArray.push(2)
-    } if(searchValue.includes("'volleyball'")) {
         searchArray.push(3);
-    } if(searchValue.includes("'soccer'")) {
-        searchArray.push(4);
-    } if(searchValue.includes("'baseball'")) {
+    } if(searchValue.includes("'tennis'")) {
+        searchArray.push(20)
+    } if(searchValue.includes("'volleyball'")) {
         searchArray.push(5);
-    } if(searchValue.includes("'iceRink'")) {
-        searchArray.push(6);
-    } if(searchValue.includes("'skatePark'")) {
-        searchArray.push(7);
-    } if(searchValue.includes("'horseshoes'")) {
-        searchArray.push(8);
-    } if(searchValue.includes("'pickleball'")) {
-        searchArray.push(9);
-    }  if(searchValue.includes("'discGolf'")) {
-        searchArray.push(10);
-    } if(searchValue.includes("'grills'")) {
-        searchArray.push(11);
-    } if(searchValue.includes("'tables'")) {
-        searchArray.push(12);
-    } if(searchValue.includes("'pavillion'")) {
-        searchArray.push(13);
-    } if(searchValue.includes("'otherShelter'")) {
-        searchArray.push(14);
-    } if(searchValue.includes("'fireRing'")) {
-        searchArray.push(15);
-    } if(searchValue.includes("'lake'")) {
-        searchArray.push(16);
-    } if(searchValue.includes("'boatLaunch'")) {
-        searchArray.push(17);
-    } if(searchValue.includes("'fishing'")) {
-        searchArray.push(18);
-    } if(searchValue.includes("'beach'")) {
+    } if(searchValue.includes("'soccer'")) {
         searchArray.push(19);
-    } if(searchValue.includes("'playgrounds'")) {
-        searchArray.push(20);
-    } if(searchValue.includes("'trails'")) {
-        searchArray.push(21);
-    } if(searchValue.includes("'aquaticsCenter'")) {
+    } if(searchValue.includes("'baseball'")) {
+        searchArray.push(2);
+    } if(searchValue.includes("'iceRink'")) {
         searchArray.push(22);
-    } if(searchValue.includes("'canoeRentals'")) {
+    } if(searchValue.includes("'skatePark'")) {
+        searchArray.push(17);
+    } if(searchValue.includes("'horseshoes'")) {
+        searchArray.push(13);
+    } if(searchValue.includes("'pickleball'")) {
         searchArray.push(23);
-    } if(searchValue.includes("'dogPark'")) {
+    }  if(searchValue.includes("'discGolf'")) {
+        searchArray.push(7);
+    } if(searchValue.includes("'grills'")) {
+        searchArray.push(4);
+    } if(searchValue.includes("'tables'")) {
         searchArray.push(24);
-    } if(searchValue.includes("'recCenter'")) {
+    } if(searchValue.includes("'pavillion'")) {
         searchArray.push(25);
+    } if(searchValue.includes("'otherShelter'")) {
+        searchArray.push(15);
+    } if(searchValue.includes("'fireRing'")) {
+        searchArray.push(10);
+    } if(searchValue.includes("'lake'")) {
+        searchArray.push(26);
+    } if(searchValue.includes("'boatLaunch'")) {
+        searchArray.push(6);
+    } if(searchValue.includes("'fishing'")) {
+        searchArray.push(11);
+    } if(searchValue.includes("'beach'")) {
+        searchArray.push(27);
+    } if(searchValue.includes("'playgrounds'")) {
+        searchArray.push(16);
+    } if(searchValue.includes("'trails'")) {
+        searchArray.push(28);
+    } if(searchValue.includes("'aquaticsCenter'")) {
+        searchArray.push(1);
+    } if(searchValue.includes("'canoeRentals'")) {
+        searchArray.push(29);
+    } if(searchValue.includes("'dogPark'")) {
+        searchArray.push(8);
+    } if(searchValue.includes("'recCenter'")) {
+        searchArray.push(30);
     } 
-    console.log("searchArray:", searchArray)
-});
+    // console.log("searchArray:", searchArray)
+
+    searchArray;
+    var fish = true
+
+    if (fish) {
+        console.log('Hello!');
+        // const response = await fetch('api/parks/filter-parks', {
+        //     method: 'POST',
+        //     body: searchArray,
+        //     headers: { 'Content-Type' : 'application/json' }
+        // }).then ((result) => {
+        //     // Dynamically generate cards to hold the info
+        // }).catch ((err) => {
+        //     console.log(err);
+        // });
+
+        // if (response.ok) {
+        //     alert('It WORKS!');
+        // }
+    }
+}
+
+searchButton.addEventListener('click', parkSearch)
 
 module.exports = searchArray;
 
