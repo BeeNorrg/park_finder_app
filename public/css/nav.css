@@ -1,17 +1,15 @@
-/* Add a black background color to the top navigation */
-
 @media screen and (min-width: 1056px) {
   .topnav {
-    background-color: #27352f;
+    background-color: #273630;
     overflow: hidden;
-    border-bottom: rgb(121, 17, 17) solid 5px;
+    border-bottom: rgb(114, 32, 32) solid 4px;
   }
   .simpleLogo {
     display: none;
   }
   .logoContainer {
-    background-color: #27352f;
-    border-right: rgb(121, 17, 17) solid 5px;
+    background-color: #273630;
+    border-right: rgb(114, 32, 32) solid 5px;
     padding: 2px 40px 1px 20px;
     margin: -2% 0 -2% 0;
     z-index: 5;
@@ -24,6 +22,7 @@
     margin-right: 15px;
   }
   .currentDateC {
+    list-style-type: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -40,10 +39,11 @@
     height: 35px;
   }
   /*  end search bar zip code css*/
-  .login-btn {
-    background-image: url("../../assets/loginStump.jpg") !important;
+
+  .btn-color {
+    background-image: url("../assets/loginStump.jpg");
     background-size: cover !important;
-    border: #9b674d 2px solid !important;
+    border: #553627 2px solid !important;
     color: rgb(61, 38, 19) !important;
     font-size: 20px !important;
     font-weight: bold !important;
@@ -51,8 +51,8 @@
     padding-top: 4px !important;
     font-family: 'Oswald', sans-serif !important;
   }
-  .login-btn:hover {
-    filter: brightness(80%) !important;
+  .btn-color:hover {
+    filter: brightness(80%);
   }
   #welcome_msg {
     font-family: 'Seaweed Script', cursive;
@@ -65,7 +65,7 @@
   .boxcontainer {
     border: #9b674d 2px solid;
     padding: 0px 3px 0px 3px;
-    background-image: url("../../assets/loginStump.jpg");
+    background-image: url("../assets/loginStump.jpg");
     background-size: fill;
     border-radius: 5px;
     margin-left: 6px;
@@ -109,7 +109,7 @@
     height: 150px;
     width: 290px;
     right: 0px;
-    border-left: rgb(121, 17, 17) solid 5px;
+    border-left: rgb(114, 32, 32) solid 4px;
     image-resolution: b;
     z-index: 4;
   }
@@ -119,7 +119,7 @@
     height: 100%;
     width: 1600px;
     overflow: hidden;
-    background-image: url(../../assets/Forest1.png);
+    background-image: url(../assets/Forest1.png);
     background-repeat: repeat-x;
     background-position: center;
     background-size: 100% auto;
@@ -133,7 +133,7 @@
     height: 100%;
     width: 1600px;
     overflow: hidden;
-    background-image: url(../../assets/Forest3New.png);
+    background-image: url(../assets/Forest3New.png);
     background-repeat: repeat-x;
     background-position: center;
     background-size: 100% auto;
@@ -148,7 +148,7 @@
     width: 1600px;
     overflow: hidden;
     display: block;
-    background-image: url(../../assets/Forest2New.png);
+    background-image: url(../assets/Forest2New.png);
     background-repeat: repeat-x;
     background-position: center;
     background-size: 100% auto;
@@ -185,19 +185,18 @@
   .simpleLogo {
     display: none;
   }
-  .login-btn {
-    background-image: url("../../assets/loginStump.jpg") !important;
-    background-size: cover !important;
-    border: #9b674d 2px solid !important;
-    color: rgb(61, 38, 19) !important;
-    font-size: 20px !important;
-    font-weight: bold !important;
-    letter-spacing: 1px !important;
-    padding-top: 4px !important;
-    font-family: 'Oswald', sans-serif !important;
+  .navbar-login {
+    background-image: url("../assets/loginStump.jpg");
+    background-size: cover;
+    border: #9b674d 2px solid;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-top: 4px;
+    font-family: 'Oswald', sans-serif;
   }
-  .login-btn:hover {
-    filter: brightness(80%) !important;
+  .navbar-login:hover {
+    filter: brightness(80%);
   }
   .user-icon {
     cursor: pointer;
@@ -209,7 +208,7 @@
   .boxcontainer {
     border: #9b674d 2px solid;
     padding: 0px 3px 0px 3px;
-    background-image: url("../../assets/loginStump.jpg");
+    background-image: url("../assets/loginStump.jpg");
     background-size: fill;
     border-radius: 5px;
     margin-left: 6px;
@@ -250,7 +249,7 @@
     height: 100%;
     width: 600px;
     overflow: hidden;
-    background-image: url(../../assets/Forest1.png);
+    background-image: url(../assets/Forest1.png);
     background-repeat: repeat-x;
     background-position: center;
     background-size: 200% auto;
@@ -264,7 +263,7 @@
     height: 100%;
     width: 600px;
     overflow: hidden;
-    background-image: url(../../assets/Forest3New.png);
+    background-image: url(../assets/Forest3New.png);
     background-repeat: repeat-x;
     background-position: center;
     background-size: 200% auto;
@@ -279,7 +278,7 @@
     width: 600px;
     overflow: hidden;
     display: block;
-    background-image: url(../../assets/Forest2New.png);
+    background-image: url(../assets/Forest2New.png);
     background-repeat: repeat-x;
     background-position: center;
     background-size: 200% auto;
@@ -325,32 +324,31 @@
     display: none;
   }
   .loopscrollFront {
-    display:none;
+    display: none;
   }
   .loopscrollMiddle {
-    display:none;
+    display: none;
   }
   .loopscrollBack {
-    display:none;
+    display: none;
   }
   #welcome_msg {
-    font-size:40px;
-    margin-left: -5px ;
+    font-size: 40px;
+    margin-left: -5px;
   }
-  .login-btn {
-    background-image: url("../../assets/loginStump.jpg") !important;
-    background-size: cover !important;
-    border: #9b674d 2px solid !important;
-    color: rgb(61, 38, 19) !important;
-    font-size: 20px !important;
-    font-weight: bold !important;
-    letter-spacing: 1px !important;
-    padding: 2px 5px !important;
-    font-family: 'Oswald', sans-serif !important;
-    margin-left:30px !important;
+  .navbar-login {
+    background-image: url("../assets/loginStump.jpg");
+    background-size: cover;
+    border: #9b674d 2px solid;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 2px 5px;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 30px;
   }
-  .login-btn:hover {
-    filter: brightness(80%) !important;
+  .navbar-login:hover {
+    filter: brightness(80%);
   }
   .user-icon {
     cursor: pointer;
@@ -358,7 +356,7 @@
   }
   .boxcontainer {
     border: #9b674d 2px solid;
-    background-image: url("../../assets/loginStump.jpg");
+    background-image: url("../assets/loginStump.jpg");
     background-size: fill;
     border-radius: 4px;
     margin: 4px 3px 0px 36px;
@@ -385,12 +383,11 @@
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
   }
-  
 }
 
 @media screen and (max-width: 425px) {
   .logo {
-    display:none;
+    display: none;
   }
   .simpleLogo {
     height: 50px;
@@ -398,13 +395,13 @@
   #welcome_msg {
     display: none;
   }
-  .login-btn {
-    display: absolute !important;
+  .navbar-login {
+    display: absolute;
     height: 40px;
     width: 80px;
   }
   .user-icon {
-    display:block !important;
+    display: block;
     height: 50px;
     width: 50px;
   }
