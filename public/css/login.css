@@ -1,4 +1,10 @@
 .login-container {
-    background-color: wheat;
+    color: rgb(241, 237, 229);
+    background-color: #273630;
     padding-top: 5px;
+    border-radius: 5px;
+}
+
+body {
+    background-color: #344941 !important ;
 }

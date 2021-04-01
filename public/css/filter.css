@@ -55,8 +55,9 @@
 }
 
 #searchButton {
+    color: black;
     height: 101%;
-    background-color:#f2f507;
+    background-color: rgb(231, 194, 125);
 }
 
 #searchGroup {
