@@ -1,15 +1,4 @@
-function getWeather(city) {
-    var APIKey = "51f135d6aef7ba347cdd9f32a30bebca";
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
 
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function (response) {
-
-    });
-
-}
 
 //import dayjs from 'dayjs' // ES 2015
 
@@ -25,7 +14,7 @@ console.log(chosenQuote);
 setTimeout(function () {
     var d = new Date();
     var time = d.getHours();
-    if (time >= 22 || (time > 0 && time < 5)) {
+    if (time >= 22 || time < 5) {
         console.log("time between 10pm and 5am: night")
         document.getElementById("skyImage").src = "../assets/night.jpg";
 
