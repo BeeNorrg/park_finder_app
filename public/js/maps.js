@@ -19,12 +19,6 @@
       // map: map,
     // });
   // };  
- 
-
-
-
-  // console.log(locations)
-// };
 
  // let locations = [
     // {lat: 44.9231, lng: -93.1085},
