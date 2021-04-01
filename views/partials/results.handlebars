@@ -1,12 +1,11 @@
 <div class="overflow-auto" id="resultsOverflow">
-    <div>
         <div class="col-md-6">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem">
                 <div class="card-body">
-                    <h5 class="card-title">{{parks.[0].name}}</h5>
-                    <p class="Address">{{parks.[0].address}}</p>
+                    <h5 class="card-title"> <i class="fa fa-tree" aria-hidden="true"></i> <u>{{parks.[0].name}}</u></h5>
+                    <p class="Address"><i class="fa fa-road" aria-hidden="true"></i>  {{parks.[0].address}}</p>
                     <p class="amenities">
-                    <h6>amenities</h6>
+                    <h5><i class="fa fa-binoculars" aria-hidden="true"></i> Amenities</h5>
                     <ul>
                         <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
                         <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
@@ -15,70 +14,62 @@
                         <li>{{parkAmenities.[4].amenity.amenities_name}}</li>
                     </ul>
                     </p>
-                    <a href="#" class="btn btn-primary map-btn" id="park-btn" data-lat="{{parks.[0].latitude}}"
-                        data-lng="{{parks.[0].longitude}}">show on map</a>
+                    <a href="#" class="btn btn-primary map-btn btn-color" id="park-btn"
+                        data-lat="{{parks.[0].latitude}}" data-lng="{{parks.[0].longitude}}">show on map</a>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">{{parks.[1].name}}</h5>
-                    <p class="Address">{{parks.[1].address}}</p>
+                    <h5 class="card-title"><i class="fa fa-tree" aria-hidden="true"></i> {{parks.[1].name}}</h5>
+                    <p class="Address"><i class="fa fa-road" aria-hidden="true"></i>  {{parks.[1].address}}</p>
                     <p class="amenities">
-                    <h6>amenities</h6>
+                    <h5><i class="fa fa-binoculars" aria-hidden="true"></i> Amenities</h5>
                     <ul>
                         <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
                         <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
                         <li>{{parkAmenities.[2].amenity.amenities_name}}</li>
                     </ul>
                     </p>
-                    <a href="#" class="btn btn-primary map-btn" id="park-btn" data-lat="{{parks.[1].latitude}}"
-                        data-lng="{{parks.[1].longitude}}">show on map</a>
+                    <a href="#" class="btn btn-primary map-btn btn-color" id="park-btn"
+                        data-lat="{{parks.[1].latitude}}" data-lng="{{parks.[1].longitude}}">show on map</a>
                 </div>
             </div>
-        </div>
-    </div>
-    <div>
-        <div class="col-md-6">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">{{parks.[2].name}}</h5>
-                    <p class="Address">{{parks.[2].address}}</p>
+                    <h5 class="card-title"><i class="fa fa-tree" aria-hidden="true"></i> {{parks.[2].name}}</h5>
+                    <p class="Address"><i class="fa fa-road" aria-hidden="true"></i>  {{parks.[2].address}}</p>
                     <p class="amenities">
-                    <h6>amenities</h6>
+                    <h5><i class="fa fa-binoculars" aria-hidden="true"></i> Amenities</h5>
                     <ul>
                         <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
                     </ul>
                     </p>
-                    <a href="#" class="btn btn-primary map-btn" id="park-btn" data-lat="{{parks.[2].latitude}}"
-                        data-lng="{{parks.[2].longitude}}">show on map</a>
+                    <a href="#" class="btn btn-primary map-btn btn-color" id="park-btn"
+                        data-lat="{{parks.[2].latitude}}" data-lng="{{parks.[2].longitude}}">show on map</a>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">{{parks.[3].name}}</h5>
-                    <p class="Address">{{parks.[3].address}}</p>
+                    <h5 class="card-title"><i class="fa fa-tree" aria-hidden="true"></i> {{parks.[3].name}}</h5>
+                    <p class="Address"><i class="fa fa-road" aria-hidden="true"></i>  {{parks.[3].address}}</p>
                     <p class="amenities">
-                    <h6>amenities</h6>
+                    <h5><i class="fa fa-binoculars" aria-hidden="true"></i> Amenities</h5>
                     <ul>
                         <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
                         <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
                         <li>{{parkAmenities.[2].amenity.amenities_name}}</li>
                     </ul>
                     </p>
-                    <a href="#" class="btn btn-primary map-btn" id="park-btn" data-lat="{{parks.[3].latitude}}"
-                        data-lng="{{parks.[3].longitude}}">show on map</a>
+                    <a href="#" class="btn btn-primary map-btn btn-color" id="park-btn"
+                        data-lat="{{parks.[3].latitude}}" data-lng="{{parks.[3].longitude}}">show on map</a>
                 </div>
             </div>
-        </div>
-    </div>
-    <div>
-        <div class="col-md-6">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">{{parks.[4].name}}</h5>
-                    <p class="Address">{{parks.[4].address}}</p>
+                    <h5 class="card-title"><i class="fa fa-tree" aria-hidden="true"></i> {{parks.[4].name}}</h5>
+                    <p class="Address"><i class="fa fa-road" aria-hidden="true"></i>  {{parks.[4].address}}</p>
                     <p class="amenities">
-                    <h6>amenities</h6>
+                    <h5><i class="fa fa-binoculars" aria-hidden="true"></i> Amenities</h5>
                     <ul>
                         <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
                         <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
@@ -87,35 +78,31 @@
                         <li>{{parkAmenities.[4].amenity.amenities_name}}</li>
                     </ul>
                     </p>
-                    <a href="#" class="btn btn-primary map-btn" id="park-btn" data-lat="{{parks.[4].latitude}}"
-                        data-lng="{{parks.[4].longitude}}">show on map</a>
+                    <a href="#" class="btn btn-primary map-btn btn-color" id="park-btn"
+                        data-lat="{{parks.[4].latitude}}" data-lng="{{parks.[4].longitude}}">show on map</a>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">{{parks.[5].name}}</h5>
-                    <p class="Address">{{parks.[5].address}}</p>
+                    <h5 class="card-title"><i class="fa fa-tree" aria-hidden="true"></i> {{parks.[5].name}}</h5>
+                    <p class="Address"><i class="fa fa-road" aria-hidden="true"></i>  {{parks.[5].address}}</p>
                     <p class="amenities">
-                    <h6>amenities</h6>
+                    <h5><i class="fa fa-binoculars" aria-hidden="true"></i> Amenities</h5>
                     <ul>
                         <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
                         <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
                     </ul>
                     </p>
-                    <a href="#" class="btn btn-primary map-btn" id="park-btn" data-lat="{{parks.[5].latitude}}"
-                        data-lng="{{parks.[5].longitude}}">show on map</a>
+                    <a href="#" class="btn btn-primary map-btn btn-color" id="park-btn"
+                        data-lat="{{parks.[5].latitude}}" data-lng="{{parks.[5].longitude}}">show on map</a>
                 </div>
             </div>
-        </div>
-    </div>
-    <div>
-        <div class="col-md-6">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">{{parks.[6].name}}</h5>
-                    <p class="Address">{{parks.[6].address}}</p>
+                    <h5 class="card-title"><i class="fa fa-tree" aria-hidden="true"></i> {{parks.[6].name}}</h5>
+                    <p class="Address"><i class="fa fa-road" aria-hidden="true"></i>  {{parks.[6].address}}</p>
                     <p class="amenities">
-                    <h6>amenities</h6>
+                    <h5><i class="fa fa-binoculars" aria-hidden="true"></i> Amenities</h5>
                     <ul>
                         <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
                         <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
@@ -127,8 +114,8 @@
                         <li>{{parkAmenities.[7].amenity.amenities_name}}</li>
                     </ul>
                     </p>
-                    <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[6].latitude}}"
-                        data-lng="{{parks.[6].longitude}}">show on map</a>
+                    <a href="#" class="btn btn-primary map-btn btn-color" id="park-btn"
+                        data-lat="{{parks.[6].latitude}}" data-lng="{{parks.[6].longitude}}">show on map</a>
                 </div>
             </div>
         </div>
@@ -136,58 +123,58 @@
 </div>
 
 <script>
-//function calls  the map
-function initMap() {
-  //renders map
-  const map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 44.93259518565556, lng: -93.08114460929454 },
-    zoom: 12,
-  });
-  
-
-  //loops through array and calls addMarker function for every item in array
-  for(let i=0; i < locations.length; i++) {
-    addMarker(locations[i])
-  }
-
-  //creates marker to page
-  function addMarker(locations) {
-  let markers = new google.maps.Marker({
-      position: locations,
-      map: map,
-    });
-  };  
- 
+    //function calls  the map
+    function initMap() {
+        //renders map
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 44.93259518565556, lng: -93.08114460929454 },
+            zoom: 12,
+        });
 
 
+        //loops through array and calls addMarker function for every item in array
+        for (let i = 0; i < locations.length; i++) {
+            addMarker(locations[i])
+        }
 
-  console.log(locations)
-};
+        //creates marker to page
+        function addMarker(locations) {
+            let markers = new google.maps.Marker({
+                position: locations,
+                map: map,
+            });
+        };
 
-let showButtons = document.getElementsByClassName("map-btn");
-console.log("showButtons:", showButtons)
- let locations = [
-    // {lat: 44.9231, lng: -93.1085},
-    // {lat: 44.9470, lng: -93.1141},
-    // {lat: 44.9758, lng: -93.1880},
-    // {lat: 44.9222, lng: -93.0721},
-    // {lat: 44.9534, lng: -93.1201},
-    // {lat: 44.9356, lng: -93.1124},
-    // {lat: 44.8474, lng: -92.9953}
-  ];
-function showOnMap (e) {
-  if(e.target && e.target.id== 'park-btn'){  
-    e.preventDefault();
-  const parkCoords = {
-    lat: parseFloat(e.target.getAttribute("data-lat")),
-    lng: parseFloat(e.target.getAttribute("data-lng"))
-  }  
-  locations.push(parkCoords)
-  }
-  initMap();
-}
 
-for (i=0; i<7; i++) {
-showButtons[i].addEventListener('click', showOnMap);
-}
+
+
+        console.log(locations)
+    };
+
+    let showButtons = document.getElementsByClassName("map-btn");
+    console.log("showButtons:", showButtons)
+    let locations = [
+        // {lat: 44.9231, lng: -93.1085},
+        // {lat: 44.9470, lng: -93.1141},
+        // {lat: 44.9758, lng: -93.1880},
+        // {lat: 44.9222, lng: -93.0721},
+        // {lat: 44.9534, lng: -93.1201},
+        // {lat: 44.9356, lng: -93.1124},
+        // {lat: 44.8474, lng: -92.9953}
+    ];
+    function showOnMap(e) {
+        if (e.target && e.target.id == 'park-btn') {
+            e.preventDefault();
+            const parkCoords = {
+                lat: parseFloat(e.target.getAttribute("data-lat")),
+                lng: parseFloat(e.target.getAttribute("data-lng"))
+            }
+            locations.push(parkCoords)
+        }
+        initMap();
+    }
+
+    for (i = 0; i < 7; i++) {
+        showButtons[i].addEventListener('click', showOnMap);
+    }
 </script>

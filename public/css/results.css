@@ -1,10 +1,34 @@
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 #sidebar-right {
-    height: 100%;
-    width: 28%;
+    max-height: 100%;
+    width: 500px;
     padding-right: 5px;
     padding-top: 15px;
     background-color: #273630;;
     border-left: rgb(114, 32, 32) solid 5px;
     overflow-y: scroll;
+    transition: ease-in 0.8s;
+}
+
+#sidebar-right.active {
+    margin-right: -26%;
+    transition: ease-out 0.8s;
+}
+
+#sidebarCollapse {
+    max-height: 100% !important;
+    border-radius: 0px !important;
+}
+
+@media (max-width: 768px) {
+    #sidebar-left {
+        margin-right: -27%;
+    }
+    #sidebar-left.active {
+        margin-right: 0;
+    }
 }
 

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./css/login.css">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link rel='icon' href='./assets/favicon.png' type='image/x-icon'/ >
+  <link rel='icon' href='./assets/favicon.png' type='image/x-icon' />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Seaweed+Script&display=swap"
     rel="stylesheet">
 
@@ -37,22 +37,23 @@
   <div class="wrapper-left">
 
     <nav id="sidebar-left">
+    
       {{> filter }}
     </nav>
-    <button type="button" id="sidebarCollapse" class="btn btn-info">
-      <i class="fa fa-angle-right" aria-hidden="true"></i>
+    <button type="button" id="sidebarCollapse-left" class="btn btn-info">
+      <i class="fa fa-angle-left" id="pullBarIcon" aria-hidden="true"></i>
     </button>
     <div id="content">
       {{> map }}
     </div>
 
-<nav id="sidebar-right">
-    {{> results}}
-</nav>
+    <nav id="sidebar-right">
+      {{> results}}
+    </nav>
   </div>
   {{else}}
   <header class="display-flex justify-space-between align-center p-2">
-  <title>Park Finders Login</title>
+    <title>Park Finders Login</title>
   </header>
   {{{ body }}}
 
