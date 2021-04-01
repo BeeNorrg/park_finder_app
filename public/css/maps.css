@@ -10,3 +10,11 @@ height: 100%;
 margin: 0;
 padding: 0;
 }
+
+.mapPlaceHolderText {
+    position: relative;
+    margin-top: 340px;
+    text-align: center;
+    background-position:center;
+    display:block;
+}
