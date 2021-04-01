@@ -1,135 +1,135 @@
-{{> map}}
-
-<div>
-    <div class="col-md-6">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{parks.[0].name}}</h5>
-                <p class="Address">{{parks.[0].address}}</p>
-                <p class="amenities">
-                <h6>amenities</h6>
-                <ul>
-                    <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[2].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[3].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[4].amenity.amenities_name}}</li>
-                </ul>
-                </p>
-                <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[0].latitude}}"
-                    data-lng="{{parks.[0].longitude}}">show on map</a>
+<div class="overflow-auto" id="resultsOverflow">
+    <div>
+        <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{parks.[0].name}}</h5>
+                    <p class="Address">{{parks.[0].address}}</p>
+                    <p class="amenities">
+                    <h6>amenities</h6>
+                    <ul>
+                        <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[2].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[3].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[4].amenity.amenities_name}}</li>
+                    </ul>
+                    </p>
+                    <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[0].latitude}}"
+                        data-lng="{{parks.[0].longitude}}">show on map</a>
+                </div>
             </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{parks.[1].name}}</h5>
-                <p class="Address">{{parks.[1].address}}</p>
-                <p class="amenities">
-                <h6>amenities</h6>
-                <ul>
-                    <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[2].amenity.amenities_name}}</li>
-                </ul>
-                </p>
-                <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[1].latitude}}"
-                    data-lng="{{parks.[1].longitude}}">show on map</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div>
-    <div class="col-md-6">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{parks.[2].name}}</h5>
-                <p class="Address">{{parks.[2].address}}</p>
-                <p class="amenities">
-                <h6>amenities</h6>
-                <ul>
-                    <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
-                </ul>
-                </p>
-                <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[0].latitude}}"
-                    data-lng="{{parks.[0].longitude}}">show on map</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{parks.[3].name}}</h5>
-                <p class="Address">{{parks.[3].address}}</p>
-                <p class="amenities">
-                <h6>amenities</h6>
-                <ul>
-                    <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[2].amenity.amenities_name}}</li>
-                </ul>
-                </p>
-                <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[1].latitude}}"
-                    data-lng="{{parks.[1].longitude}}">show on map</a>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{parks.[1].name}}</h5>
+                    <p class="Address">{{parks.[1].address}}</p>
+                    <p class="amenities">
+                    <h6>amenities</h6>
+                    <ul>
+                        <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[2].amenity.amenities_name}}</li>
+                    </ul>
+                    </p>
+                    <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[1].latitude}}"
+                        data-lng="{{parks.[1].longitude}}">show on map</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div>
-    <div class="col-md-6">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{parks.[4].name}}</h5>
-                <p class="Address">{{parks.[4].address}}</p>
-                <p class="amenities">
-                <h6>amenities</h6>
-                <ul>
-                    <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[2].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[3].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[4].amenity.amenities_name}}</li>
-                </ul>
-                </p>
-                <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[0].latitude}}"
-                    data-lng="{{parks.[0].longitude}}">show on map</a>
+    <div>
+        <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{parks.[2].name}}</h5>
+                    <p class="Address">{{parks.[2].address}}</p>
+                    <p class="amenities">
+                    <h6>amenities</h6>
+                    <ul>
+                        <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
+                    </ul>
+                    </p>
+                    <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[0].latitude}}"
+                        data-lng="{{parks.[0].longitude}}">show on map</a>
+                </div>
             </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{parks.[5].name}}</h5>
-                <p class="Address">{{parks.[5].address}}</p>
-                <p class="amenities">
-                <h6>amenities</h6>
-                <ul>
-                    <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
-                </ul>
-                </p>
-                <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[1].latitude}}"
-                    data-lng="{{parks.[1].longitude}}">show on map</a>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{parks.[3].name}}</h5>
+                    <p class="Address">{{parks.[3].address}}</p>
+                    <p class="amenities">
+                    <h6>amenities</h6>
+                    <ul>
+                        <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[2].amenity.amenities_name}}</li>
+                    </ul>
+                    </p>
+                    <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[1].latitude}}"
+                        data-lng="{{parks.[1].longitude}}">show on map</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div>
-    <div class="col-md-6">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{parks.[6].name}}</h5>
-                <p class="Address">{{parks.[6].address}}</p>
-                <p class="amenities">
-                <h6>amenities</h6>
-                <ul>
-                    <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[2].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[3].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[4].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[5].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[6].amenity.amenities_name}}</li>
-                    <li>{{parkAmenities.[7].amenity.amenities_name}}</li>
-                </ul>
-                </p>
-                <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[0].latitude}}"
-                    data-lng="{{parks.[0].longitude}}">show on map</a>
+    <div>
+        <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{parks.[4].name}}</h5>
+                    <p class="Address">{{parks.[4].address}}</p>
+                    <p class="amenities">
+                    <h6>amenities</h6>
+                    <ul>
+                        <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[2].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[3].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[4].amenity.amenities_name}}</li>
+                    </ul>
+                    </p>
+                    <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[0].latitude}}"
+                        data-lng="{{parks.[0].longitude}}">show on map</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{parks.[5].name}}</h5>
+                    <p class="Address">{{parks.[5].address}}</p>
+                    <p class="amenities">
+                    <h6>amenities</h6>
+                    <ul>
+                        <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
+                    </ul>
+                    </p>
+                    <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[1].latitude}}"
+                        data-lng="{{parks.[1].longitude}}">show on map</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{parks.[6].name}}</h5>
+                    <p class="Address">{{parks.[6].address}}</p>
+                    <p class="amenities">
+                    <h6>amenities</h6>
+                    <ul>
+                        <li>{{parkAmenities.[0].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[1].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[2].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[3].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[4].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[5].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[6].amenity.amenities_name}}</li>
+                        <li>{{parkAmenities.[7].amenity.amenities_name}}</li>
+                    </ul>
+                    </p>
+                    <a href="#" class="btn btn-primary" id="park-btn" data-lat="{{parks.[0].latitude}}"
+                        data-lng="{{parks.[0].longitude}}">show on map</a>
+                </div>
             </div>
         </div>
     </div>
