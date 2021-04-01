@@ -1,0 +1,95 @@
+.card {
+    border:none;
+}
+
+.btn-outline-secondary {
+    border-radius:30%;
+    
+}
+
+.container-fluid {
+    
+}
+
+.filterColumn {
+    
+    margin-right:3px;
+    padding:3px;
+}
+
+.accordion-button {
+    width:100%;
+    max-width:150px;
+    margin-left:0px;
+    border-radius:12px;
+    background-color:#f2f507;
+    padding:1px 5px;
+}
+
+#searchContainer {
+    width:40%;
+    height:100%;
+    min-height:250px;
+    left:0px;
+    margin-left:0px;
+    padding:20px;
+    padding-left:2px;
+    border:solid 1px red;
+}
+
+#filterDropdown {
+    background-color:#0B07F5;
+}
+
+#searchButton {
+    background-color:#f2f507;
+}
+
+#searchGroup {
+    margin-bottom:0px!important;
+}
+
+#searchSub {
+    padding:0px;
+}
+
+#sportsPopulate {
+    border: solid 1px black;
+}
+
+#searchBarColumn {
+    margin-right:0px;
+}
+
+
+
+
+@media (min-width: 576px) {
+    body {
+        font-size: smaller;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: small;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        font-size: small;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: small;
+    }
+}
+
+@media (min-width: 1400px) {
+    body {
+        font-size: medium;
+    }
+}
