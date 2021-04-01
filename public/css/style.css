@@ -25,3 +25,8 @@
     background-color: #4CAF50;
     color: white;
   }
+
+  #resultsOverflow {
+    height:50%;
+    width:100%;
+}

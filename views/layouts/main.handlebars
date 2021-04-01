@@ -38,24 +38,30 @@
     {{#if logged_in}}
     <div class="row">
       <div class="col-md-12">
-        {{{ body }}}      
+        {{!-- {{{ body }}}       --}}
       </div>
     </div>
-    {{/if}}
+
   </header>
-  <main class="container container-fluid mt-5">
+  <main class="container-fluid">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md" id="filter-col">
         {{> filter }}
       </div>
       <div class="col-md-6">
         {{> map }}
       </div>
+      <div class="col-md">
+        {{> results}}
+      </div>
     </div>
 
-        {{!-- {{{ body }}} --}}
+      {{!-- {{> results }} --}}
+      {{else}}
+        {{{ body }}}
 
   </main>
+      {{/if}}
   <footer>
 
   </footer>
