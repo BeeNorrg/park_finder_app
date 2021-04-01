@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Park Finder</title>
+  <title>Park Finders</title>
   <link rel="stylesheet" href="./css/jass.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/results.css">
   <link rel="stylesheet" href="./css/nav.css">
   <link rel="stylesheet" href="./css/filter.css">
-
+  <link rel="stylesheet" href="./css/login.css">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-
+<link rel='icon' href='./assets/favicon.png' type='image/x-icon'/ >
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Seaweed+Script&display=swap"
     rel="stylesheet">
 
@@ -30,47 +30,42 @@
 </head>
 
 <body>
-
-  {{!-- Navbar --}}
   {{> nav}}
+  {{#if logged_in}}
+
+
+  <div class="wrapper-left">
+
+    <nav id="sidebar-left">
+      {{> filter }}
+    </nav>
+    <button type="button" id="sidebarCollapse" class="btn btn-info">
+      <i class="fa fa-angle-right" aria-hidden="true"></i>
+    </button>
+    <div id="content">
+      {{> map }}
+    </div>
+
+<nav id="sidebar-right">
+    {{> results}}
+</nav>
+  </div>
+  {{else}}
   <header class="display-flex justify-space-between align-center p-2">
-
-    {{#if logged_in}}
-    <div class="row">
-      <div class="col-md-12">
-        {{!-- {{{ body }}}       --}}
-      </div>
-    </div>
-
+  <title>Park Finders Login</title>
   </header>
-  <main class="container-fluid">
-    <div class="row">
-      <div class="col-md" id="filter-col">
-        {{> filter }}
-      </div>
-      <div class="col-md-6">
-        {{> map }}
-      </div>
-      <div class="col-md">
-        {{> results}}
-      </div>
-    </div>
+  {{{ body }}}
 
-      {{!-- {{> results }} --}}
-      {{else}}
-        {{{ body }}}
 
-  </main>
-      {{/if}}
-  <footer>
+  <footer></footer>
+  {{/if}}
 
-  </footer>
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
   <script src="./js/nav.js"></script>
   <script src="./js/search_script.js"></script>
-  <script src='./js/maps.js'></script>
+  <script src="./js/maps.js"></script>
 
 </body>
 

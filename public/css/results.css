@@ -1,0 +1,10 @@
+#sidebar-right {
+    height: 100%;
+    width: 28%;
+    padding-right: 5px;
+    padding-top: 15px;
+    background-color: #273630;;
+    border-left: rgb(114, 32, 32) solid 5px;
+    overflow-y: scroll;
+}
+
