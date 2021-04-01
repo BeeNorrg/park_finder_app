@@ -66,7 +66,7 @@ function searchBarPopLoop () {
 
         //selects which element we're putting filters in and assigns it a responsively sized column and id. also fills the currentIds array with element ids that the filter checkboxes are appended to
         for (n=0; n < currentDivvy; n++) {
-            $("#" + currentFName + "Filters").append("<div class='col-md-" + currentCSize + " " + currentFName + "column' id='" + currentFName + "Populate" + n + "'></div>");
+            $("#" + currentFName + "Filters").append("<div class='col-md-12" + currentFName + "column' id='" + currentFName + "Populate" + n + "'></div>");
             currentIds.push("#" + currentFName + "Populate" + n);
         };
         console.log("currentIds", currentIds);

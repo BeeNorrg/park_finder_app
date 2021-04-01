@@ -47,8 +47,32 @@ setTimeout(function () {
 
 $(document).ready(function () {
 
-    $('#sidebarCollapse').on('click', function () {
+    $('#sidebarCollapse-left').on('click', function () {
         $('#sidebar-left').toggleClass('active');
     });
 
 });
+
+$(document).ready(function () {
+
+    $('#sidebarCollapse-right').on('click', function () {
+        $('#sidebar-right').toggleClass('active');
+    });
+
+});
+
+
+async function switchIcon(event) {
+    event.preventDefault();
+    if(!document.querySelector('.fa-angle-left'))
+    {
+        document.querySelector('.fa-angle-right').classList.add('fa-angle-left');
+        document.querySelector('.fa-angle-left').classList.remove('fa-angle-right')
+    }
+    else {
+        document.querySelector('.fa-angle-left').classList.add('fa-angle-right');
+        document.querySelector('.fa-angle-right').classList.remove('fa-angle-left')
+    }
+    
+}
+document.querySelector('#sidebarCollapse-left').addEventListener('click', switchIcon);
