@@ -11,6 +11,10 @@
     -webkit-text-size-adjust: 100%;
     /* 2 */
   }
+
+  header {
+    align-content: center;
+  }
   
   /* Sections
      ========================================================================== */

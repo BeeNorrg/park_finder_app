@@ -1,0 +1,110 @@
+[
+    {
+        "parks_id": 1,
+        "amenities_id": 3
+    },
+    {
+        "parks_id": 1,
+        "amenities_id": 4
+    },
+    {
+        "parks_id": 1,
+        "amenities_id": 14
+    },
+    {
+        "parks_id": 1,
+        "amenities_id": 15
+    },
+    {
+        "parks_id": 1,
+        "amenities_id": 19
+    },
+    {
+        "parks_id": 2,
+        "amenities_id": 4
+    },
+    {
+        "parks_id": 2,
+        "amenities_id": 14
+    },
+    {
+        "parks_id": 2,
+        "amenities_id": 15
+    },
+    {
+        "parks_id": 3,
+        "amenities_id": 14
+    },
+    {
+        "parks_id": 4,
+        "amenities_id": 2
+    },
+    {
+        "parks_id": 4,
+        "amenities_id": 17
+    },
+    {
+        "parks_id": 4,
+        "amenities_id": 18
+    },
+    {
+        "parks_id": 5,
+        "amenities_id": 4
+    },
+    {
+        "parks_id": 5,
+        "amenities_id": 13
+    },
+    {
+        "parks_id": 5,
+        "amenities_id": 14
+    },
+    {
+        "parks_id": 5,
+        "amenities_id": 15
+    },
+    {
+        "parks_id": 5,
+        "amenities_id": 19
+    },
+    {
+        "parks_id": 6,
+        "amenities_id": 14
+    },
+    {
+        "parks_id": 6,
+        "amenities_id": 15
+    },
+    {
+        "parks_id": 7,
+        "amenities_id": 2
+    },
+    {
+        "parks_id": 7,
+        "amenities_id": 3
+    },
+    {
+        "parks_id": 7,
+        "amenities_id": 13
+    },
+    {
+        "parks_id": 7,
+        "amenities_id": 14
+    },
+    {
+        "parks_id": 7,
+        "amenities_id": 15
+    },
+    {
+        "parks_id": 7,
+        "amenities_id": 17
+    },
+    {
+        "parks_id": 7,
+        "amenities_id": 18
+    },
+    {
+        "parks_id": 7,
+        "amenities_id": 19
+    }
+]
