@@ -19,7 +19,7 @@ router.get('/', withAuth, async (req, res) => {
 
     const api_key = process.env.API_KEY;
     const maps = `https://maps.googleapis.com/maps/api/js?key=${api_key}&callback=initMap&libraries=&v=weekly`
-
+    
     const users = userData.map((project) => project.get({ plain: true }));
     const parks = parkData.map((project) => project.get({ plain: true }));
     const parkAmenities = parkAmenitiesData.map((project) => project.get({ plain: true }));
